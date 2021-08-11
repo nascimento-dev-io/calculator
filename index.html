@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <main class="calculator">
+      <div class="calculator-wrapper">
+        <div class="toggle-theme">
+          Calculator
+          <label for="theme-check">
+            <input type="checkbox" id="theme-check" />
+            <div class="button-toggle"></div
+          ></label>
+        </div>
+        <div class="bar-top"></div>
+
+        <div class="display">
+          <div class="display-info"></div>
+          <div class="display-result"></div>
+        </div>
+
+        <div class="buttons-container">
+          <div class="operation" data-value="CE" style="font-weight: 700">
+            CE
+          </div>
+          <div class="operation" data-value="%">
+            <i class="fas fa-percent"></i>
+          </div>
+
+          <div class="operation plus-minus" data-value="+-">
+            <i class="fas fa-plus" style="margin-bottom: -6px"></i>
+            <i class="fas fa-minus"></i>
+          </div>
+          <div class="operation" data-value="/">
+            <i class="fas fa-divide"></i>
+          </div>
+
+          <!--  -->
+          <input type="button" value="7" data-value="7" />
+          <input type="button" value="8" data-value="8" />
+          <input type="button" value="9" data-value="9" />
+          <div class="operation" data-value="*">
+            <i class="fas fa-times"></i>
+          </div>
+
+          <!--  -->
+          <input type="button" value="4" data-value="4" />
+          <input type="button" value="5" data-value="5" />
+          <input type="button" value="6" data-value="6" />
+          <div class="operation" data-value="-">
+            <i class="fas fa-minus"></i>
+          </div>
+
+          <!--  -->
+          <input type="button" value="1" data-value="1" />
+          <input type="button" value="2" data-value="2" />
+          <input type="button" value="3" data-value="3" />
+          <div class="operation" data-value="+">
+            <i class="fas fa-plus"></i>
+          </div>
+
+          <!--  -->
+          <div class="operation" data-value="C">
+            <i class="far fa-window-close"></i>
+          </div>
+
+          <input type="button" value="0" data-value="0" />
+          <input type="button" value="." data-value="." />
+          <div class="operation" data-value="=">
+            <i class="fas fa-equals"></i>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p style="font-size: 0.8rem">
+        Desenvolvido com &#9829; por
+        <em>Jorge Nascimento</em>
+      </p>
+    </footer>
+
+    <script>
+      const toggleCheck = document.querySelector("#theme-check");
+
+      toggleCheck.addEventListener("click", () => {
+        document.body.classList.toggle("ligth");
+      });
+    </script>
+
+    <script src="./scripts/Calculator.js"></script>
+  </body>
+</html>
